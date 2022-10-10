@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
+
 body {
     background-image: url(../images/flags.png);
+    font-family: Abhaya Libre, sans-serif;
 }
 
 .container {
@@ -14,4 +17,20 @@ body {
 
 .container > h1 {
     color: rgb(35, 35, 153);
+    font-size: 50px;
 }
+
+#quiz {
+    height: 50%;
+    width: 100%;
+    margin-top: 10%;
+
+}
+
+#quiz > p {
+    font-size: 30px;
+    text-align: center;
+    color: rgb(165, 36, 36);
+    text-decoration-style: solid;
+}
+
