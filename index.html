@@ -22,18 +22,24 @@
         <h1>Test Your Knowledge! Capitals Quiz</h1>
 
         <div id="quiz">
-            <p id="question">Which is the capital of?</p>
-            <input type="radio" id="a" name="a" value="a" class="buttons">
-            <label for="a">a</label><br/>
-            <input type="radio" id="b" name="b" value="b" class="buttons">
-            <label for="b">b</label><br/>
-            <input type="radio" id="c" name="c" value="c" class="buttons">
-            <label for="c">c</label><br/>
+            <p id="question"></p>
+            <form>
+                <input type="radio" name="planswer" value="a" class="buttons">
+                <label for="a" id="a"></label><br />
+                <input type="radio" name="planswer" value="b" class="buttons">
+                <label for="b" id="b"></label><br />
+                <input type="radio" name="planswer" value="c" class="buttons">
+                <label for="c" id="c"></label><br />
+            </form>
         </div>
+
+        <span id="answermsg">Your answer is correct!</span><br>
+
+        <br>
+        <span id="results">1/10</span>
 
         <button id="submit">Submit</button>
 
-        <div id="results"></div>
     </div>
     <script src="assets/js/script.js"></script>
 

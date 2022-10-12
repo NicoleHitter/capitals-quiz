@@ -6,13 +6,19 @@ body {
 }
 
 .container {
+    /*Sets the size and style of the area that includes the text */
     width: 60%;
     height: 600px;
     background-color: rgb(250, 249, 248);
     border: 4px solid;
     margin: auto;
     margin-top: 15%;
+    /*Sets the style and color of the text*/
     text-align: center;
+    color: rgb(165, 36, 36);
+    font-size: 30px;
+    text-decoration-style: solid;
+
 }
 
 .container > h1 {
@@ -20,17 +26,35 @@ body {
     font-size: 50px;
 }
 
+#answermsg  {
+    color: rgb(113, 156, 11);
+    text-decoration-line: underline;
+}
+
 #quiz {
-    height: 50%;
+    height: 40%;
     width: 100%;
     margin-top: 10%;
 
 }
 
-#quiz > p {
-    font-size: 30px;
-    text-align: center;
-    color: rgb(165, 36, 36);
-    text-decoration-style: solid;
+#results {
+    width: 50%;
+    margin:20% 30% 0 0;
+    color: rgb(23, 23, 223);
+}
+
+#submit {
+    height: 45px;
+    width: 80px;
+    font-size: large;
+    background: rgb(140, 140, 212);
+    color: #fff;
+    border:1px solid rgb(31, 25, 25);
+    border-radius: 10%;
+}
+
+#submit:hover{
+    background-color: rgb(23, 23, 223);
 }
 
