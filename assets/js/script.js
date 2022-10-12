@@ -37,8 +37,9 @@ let myQuestions = [{
 ];
 
 let playerAnswer = '';
+let score = 0;
 
-let i = 0;
+let i = 0
 
 function displayQuestion() {
        
@@ -66,7 +67,15 @@ function checkAnswer() {
 
     if (playerAnswer === myQuestions[i].correctAnswer) {
         document.getElementById('answermsg').innerHTML = 'Correct!';
+        score++;
+        document.getElementById('score').innerHTML=`Correct answers: ${score}/10`;
     } else {
         document.getElementById('answermsg').innerHTML = `Incorrect. The correct answer is ${myQuestions[i].correctAnswer}!`
     }
+} 
+
+function incrementIndex() {
+    i += 1;
+    displayQuestion();
 }
+
