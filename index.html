@@ -24,21 +24,21 @@
         <div id="quiz">
             <p id="question"></p>
             <form>
-                <input type="radio" name="planswer" value="a" class="buttons">
+                <input type="radio" name="planswer" value="a" class="buttons" checked>
                 <label for="a" id="a"></label><br />
-                <input type="radio" name="planswer" value="b" class="buttons">
+                <input type="radio" name="planswer" value="b" class="buttons" checked>
                 <label for="b" id="b"></label><br />
-                <input type="radio" name="planswer" value="c" class="buttons">
+                <input type="radio" name="planswer" value="c" class="buttons" checked>
                 <label for="c" id="c"></label><br />
             </form>
         </div>
 
-        <span id="answermsg">Your answer is correct!</span><br>
+        <span id="answermsg"></span><br>
 
         <br>
         <span id="results">1/10</span>
 
-        <button id="submit">Submit</button>
+        <button id="submit" onclick ="checkAnswer()">Submit</button>
 
     </div>
     <script src="assets/js/script.js"></script>

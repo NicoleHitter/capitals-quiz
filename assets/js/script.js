@@ -37,8 +37,9 @@ let myQuestions = [{
 ];
 
 
-for (let i = 0; i < myQuestions.length; i++) {
-    function displayQuestion() {
+let i = 0;
+
+function displayQuestion() {
        
         document.getElementById('question').innerHTML = myQuestions[i].question;
         let answersList = myQuestions[i].answers;
@@ -48,5 +49,23 @@ for (let i = 0; i < myQuestions.length; i++) {
 
     }
     displayQuestion();
-};
 
+
+function checkAnswer() {
+    let playerAnswer = '';
+    for(let y=0; y<3; y++){
+        if (document.getElementById('a').checked){
+            playerAnswer = document.getElementById('a').innerHTML;
+        } else if (document.getElementById('b').checked){
+            playerAnswer = document.getElementById('b').innerHTML;
+        } else if (document.getElementById('c').checked){
+            playerAnswer = document.getElementById('c').innerHTML;
+        }
+    }
+
+    if (playerAnswer === myQuestions[i].correctAnswer) {
+        document.getElementById('answermsg').innerHTML = 'Correct!';
+    } else {
+        document.getElementById('answermsg').innerHTML = `Incorrect. The correct answer is ${myQuestions[i].correctAnswer}!`
+    }
+}
