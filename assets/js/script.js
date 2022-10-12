@@ -36,6 +36,7 @@ let myQuestions = [{
     }
 ];
 
+let playerAnswer = '';
 
 let i = 0;
 
@@ -50,16 +51,16 @@ function displayQuestion() {
     }
     displayQuestion();
 
-
+    
 function checkAnswer() {
-    let playerAnswer = '';
+    
     for(let y=0; y<3; y++){
-        if (document.getElementById('a').checked){
-            playerAnswer = document.getElementById('a').innerHTML;
-        } else if (document.getElementById('b').checked){
-            playerAnswer = document.getElementById('b').innerHTML;
-        } else if (document.getElementById('c').checked){
-            playerAnswer = document.getElementById('c').innerHTML;
+        if (document.getElementById('firstinput').checked){
+            playerAnswer = document.getElementById('a').textContent;
+        } else if (document.getElementById('secondinput').checked){
+            playerAnswer = document.getElementById('b').textContent;
+        } else if (document.getElementById('thirdinput').checked){
+            playerAnswer = document.getElementById('c').textContent;
         }
     }
 
