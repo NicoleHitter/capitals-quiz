@@ -1,108 +1,104 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Capitals Quiz
+## Description 
+Capitals Quiz is an online Quiz designed to allow the user to test his knowledge about the worlds capitals. The Quiz is created in a very interactive and intuitive manner that would make it very accesible and entertaining. 
+### User Stories
+  * As a user I would like to test my knowledge about world's capitals
 
-Welcome NicoleHitter,
+## Features
+### Existing Features
+  * Capitals Quiz Heading 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+As the page has uploaded the user is presented with a large title area that is designed to caption his atention and interest.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Title](doc/screenshots/title.png)
 
-## Gitpod Reminders
+  * The Start Button
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+After getting intrigued by the title user should be already willing to play the game, and this can be easily done by pressing on the start button. 
 
-`python3 -m http.server`
+![Start](doc/screenshots/Start.png)
 
-A blue button should appear to click: _Make Public_,
+  * Question Section
 
-Another blue button should appear to click: _Open Browser_.
+Once user has started the game, he will be presented with one question per page, that will have three answer options, from which he can chose then submit his answer. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![Question](doc/screenshots/question.png)
 
-A blue button should appear to click: _Make Public_,
+  * The Score Area
 
-Another blue button should appear to click: _Open Browser_.
+After submitting his answer a text will appear to say if answer was correct and if contrary to say which was the correct answer. Also underneath this text there is a section that will allow the user to see exactly how many correct and incorrect answers they have provided.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![Scores](doc/screenshots/scorearea.png)
 
-To log into the Heroku toolbelt CLI:
+  * Next button
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Aside of the submit button, there is a Next button, which can be pressed only after submitting an answer, and this will take user to next question or at the end of the game when questions have finished. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+![Buttons](doc/screenshots/buttons.png)
 
-------
+  * End of Game
 
-## Release History
+When questions have ended user will be presented with his final score, and then have the option to play the quiz again on pressing Restart button. 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+![Final Score](doc/screenshots/finalscore.png)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Features Left to Implement
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+In time the site should allow the user to create an account and play against time and other users.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Typography and colour scheme
+Page has a fairly simple appearence. Backround is created by an image with different flags, then text area is fitted inside a white container. Text colours have been specified in CSS by rgb(red,green,blue) values. 
+ 
+## Testing
+Once page has loaded you are presented with the Quiz Title and the possibility to start the Quiz by pressing on Start button. 
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Once that done, question section will be uploaded that includes one question and three answers - buttons, from which user can select one. 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+Under the question there are two submit buttons: Submit and Next. Submit should be pressed first once selected a question, then Next, as otherwise Next button would not be able to go to next question. 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+After submission user will be shown a message that will say if question correct, and if not will be shown the correct answer. Underneath this message sits the score area that will keep track of correct vs wrong answers. 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+Once user ready for the next question he can press on Next button, which will generate next question. 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+All this can be repeated until questions are finished. 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+At the end of the quiz game user will be shown his final score and given the option to re-start quiz again by pressing Restart button which will take him to the beginning from where he can prest start and play the Capitals Quiz again.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Validator Testing
+#### HTML
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+No errors were returned when passing through the official W3C validator.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+#### CSS
 
-------
+No errors were returned when passing through the official W3C CSS validator.
 
-## FAQ about the uptime script
+#### JavaScript
 
-**Why have you added this script?**
+No errors were found when passing through the official Jshint validator
+Metrics
+* There are 5 functions in this file.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+* Function with the largest signature take 1 arguments, while the median is 0.
 
-**How will this affect me?**
+* Largest function has 13 statements in it, while the median is 4.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+* The most complex function has a cyclomatic complexity value of 6 while the median is 1.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Deployment
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+  * In the GitHub repository, navigate to the Settings tab
+  * From the source section drop-down menu, select the Master Branch
+  * Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## Credits
+### Content
+The text for the Home page was taken from [This Quotes Site](https://www.scarymommy.com/cake-quotes).
 
-**So….?**
+The Ingredients and Method from Recipe page was taken from [This Culinary Page](https://www.inspiredtaste.net/24593/essential-pancake-recipe/).
+The icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
+### Media
+The photos used were taken from [Pexels](https://www.pexels.com/ro-ro/), [Unsplash](https://unsplash.com/) and [StockVault](https://www.stockvault.net/).
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!

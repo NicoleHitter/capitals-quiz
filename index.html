@@ -11,7 +11,6 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 
     <title>Capitals Quiz</title>
 </head>
@@ -22,35 +21,34 @@
         <h1>Test Your Knowledge! Capitals Quiz</h1>
 
         <div id="text-container" class="hide">
-        <div id="question-container">
-            <p id="question"></p>
-            <form>
-                <input type="radio" name="planswer" value="a" id="firstinput" class="buttons" checked >
-                <label for="a" id="a"></label><br />
-                <input type="radio" name="planswer" value="b" id="secondinput" class="buttons" checked >
-                <label for="b" id="b"></label><br />
-                <input type="radio" name="planswer" value="c" id="thirdinput" class="buttons" checked >
-                <label for="c" id="c"></label><br />
-            </form>
+            <div id="question-container">
+                <p id="question"></p>
+                <form>
+                    <input type="radio" name="planswer" value="a" id="firstinput" class="buttons">
+                    <label for="firstinput" id="a"></label><br>
+                    <input type="radio" name="planswer" value="b" id="secondinput" class="buttons">
+                    <label for="secondinput" id="b"></label><br>
+                    <input type="radio" name="planswer" value="c" id="thirdinput" class="buttons">
+                    <label for="thirdinput" id="c"></label><br>
+                </form>
+            </div>
+
+            <span id="answermsg"></span><br>
+
+            <div class="scores">
+                <span id="score"></span>
+                <span id="negscore"></span>
+            </div><br>
+
+            <button id="submit-btn" class="play-btn">Submit</button>
+            <button id="next-btn" class="play-btn">Next</button>
+
         </div>
-        
-        <span id="answermsg"></span><br>
+        <span id="end-paragraph"></span>
 
-        <br>
-        <div class="scores">
-            <span id="score"></span>
-            <span id="negscore"></span>
-        </div>
+        <button id="start-btn" class="play-btn">Start</button>
+    </div>
 
-    <button id="submit-btn" class="play-btn">Submit</button>
-    <button id="next-btn" class="play-btn">Next</button><br>
-
-</div>
-    <span id="end-paragraph"></span>
-
-    <button id="start-btn" class="play-btn">Start</button>
-</div>
-    
     <script src="assets/js/script.js"></script>
 
 </body>
