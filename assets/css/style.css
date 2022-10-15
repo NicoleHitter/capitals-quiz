@@ -44,12 +44,16 @@ body {
     color: rgb(23, 23, 223);
 }
 
+/*Setting the style for start,submit and restart buttons*/
 .play-btn {
+    /* sets the size of the button */
     height: 45px;
     width: 80px;
+    /* sets the color and size of text */
     font-size: large;
-    background: rgb(140, 140, 212);
     color: #fff;
+    background: rgb(140, 140, 212);
+    /* sets the shape of the button */
     border:1px solid rgb(31, 25, 25);
     border-radius: 10%;
 }
