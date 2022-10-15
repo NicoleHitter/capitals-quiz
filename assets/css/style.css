@@ -31,7 +31,7 @@ body {
     text-decoration-line: underline;
 }
 
-#quiz {
+#question-container {
     height: 40%;
     width: 100%;
     margin-top: 10%;
@@ -44,7 +44,7 @@ body {
     color: rgb(23, 23, 223);
 }
 
-#submit {
+.play-btn {
     height: 45px;
     width: 80px;
     font-size: large;
@@ -54,7 +54,18 @@ body {
     border-radius: 10%;
 }
 
-#submit:hover{
+.play-btn:hover{
     background-color: rgb(23, 23, 223);
+}
+
+.scores{
+    width: 100%;
+    font-size: 25px;
+}
+
+
+
+.hide {
+    display: none;
 }
 

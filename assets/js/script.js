@@ -1,4 +1,4 @@
-let myQuestions = [{
+const MY_QUESTIONS = [{
         question: "Which is the capital of Brasil?",
         answers: {
             a: 'Rio De Janeiro',
@@ -36,26 +36,43 @@ let myQuestions = [{
     }
 ];
 
+const startButton = document.getElementById('start-btn');
+const submitButton = document.getElementById('submit-btn');
+const nextButton = document.getElementById('next-btn');
+const questionArea = document.getElementById('text-container');
+
+let questionIndex = 0;
 let playerAnswer = '';
 let score = 0;
+let negscore = 0;
 
-let i = 0
+
+startButton.addEventListener('click', startQuiz);
+submitButton.addEventListener('click', checkAnswer);
+nextButton.addEventListener('click', displayQuestion);
+
+function startQuiz() {
+    console.log('started');
+    startButton.classList.add('hide');
+    questionArea.classList.remove('hide');
+    displayQuestion();
+}
 
 function displayQuestion() {
        
-        document.getElementById('question').innerHTML = myQuestions[i].question;
-        let answersList = myQuestions[i].answers;
+        document.getElementById('question').innerHTML = MY_QUESTIONS[questionIndex].question;
+        let answersList = MY_QUESTIONS[questionIndex].answers;
         document.getElementById('a').innerHTML = answersList.a;
         document.getElementById('b').innerHTML = answersList.b;
         document.getElementById('c').innerHTML = answersList.c;
 
     }
-    displayQuestion();
+    
 
     
 function checkAnswer() {
     
-    for(let y=0; y<3; y++){
+    for(let optionsno=0; optionsno<3; optionsno++){
         if (document.getElementById('firstinput').checked){
             playerAnswer = document.getElementById('a').textContent;
         } else if (document.getElementById('secondinput').checked){
@@ -65,17 +82,17 @@ function checkAnswer() {
         }
     }
 
-    if (playerAnswer === myQuestions[i].correctAnswer) {
+    if (playerAnswer === MY_QUESTIONS[questionIndex].correctAnswer) {
         document.getElementById('answermsg').innerHTML = 'Correct!';
         score++;
-        document.getElementById('score').innerHTML=`Correct answers: ${score}/10`;
+        document.getElementById('score').innerHTML=`Correct answers: ${score}`;
     } else {
-        document.getElementById('answermsg').innerHTML = `Incorrect. The correct answer is ${myQuestions[i].correctAnswer}!`
+        document.getElementById('answermsg').innerHTML = `Incorrect. The correct answer is ${MY_QUESTIONS[questionIndex].correctAnswer}!`
+        negscore++;
+        document.getElementById('negscore').innerHTML=`Wrong answers: ${negscore}`
     }
+    questionIndex++;
 } 
 
-function incrementIndex() {
-    i += 1;
-    displayQuestion();
-}
+
 
