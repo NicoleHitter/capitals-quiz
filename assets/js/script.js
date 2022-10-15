@@ -59,12 +59,15 @@ function startQuiz() {
 }
 
 function displayQuestion() {
-       
+       if(questionIndex<MY_QUESTIONS.length){ 
         document.getElementById('question').innerHTML = MY_QUESTIONS[questionIndex].question;
         let answersList = MY_QUESTIONS[questionIndex].answers;
         document.getElementById('a').innerHTML = answersList.a;
         document.getElementById('b').innerHTML = answersList.b;
         document.getElementById('c').innerHTML = answersList.c;
+    } else {
+        endQuiz();
+    }
 
     }
     
@@ -94,5 +97,13 @@ function checkAnswer() {
     questionIndex++;
 } 
 
+function endQuiz() {
+     document.getElementById("end-paragraph").innerHTML=
+     `<p>You have ${score} correct answer(s) and ${negscore} incorrect answer(s)!</p>
+     <button id="restart-btn" class="play-btn" onClick="location.href='https://8000-nicolehitte-capitalsqui-ylzxre2nrha.ws-eu71.gitpod.io/'">Restart</button>`;
+    
+    questionArea.classList.add('hide');
+     
+}
 
 
