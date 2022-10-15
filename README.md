@@ -77,7 +77,7 @@ No errors were returned when passing through the official W3C CSS validator.
 
 #### JavaScript
 
-No errors were found when passing through the official Jshint validator
+No errors were found when passing through the official Jshint validator.
 Metrics
 * There are 5 functions in this file.
 
@@ -95,10 +95,16 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 
 ## Credits
 ### Content
-The text for the Home page was taken from [This Quotes Site](https://www.scarymommy.com/cake-quotes).
+The information has been taken from  [Wikipedia](https://en.wikipedia.org/wiki/List_of_national_capitals).
 
-The Ingredients and Method from Recipe page was taken from [This Culinary Page](https://www.inspiredtaste.net/24593/essential-pancake-recipe/).
-The icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
+
 ### Media
-The photos used were taken from [Pexels](https://www.pexels.com/ro-ro/), [Unsplash](https://unsplash.com/) and [StockVault](https://www.stockvault.net/).
+Flags image has been taken from [Flags](https://www.google.com/url?sa=i&url=https%3A%2F%2Fworld-geography-games.com%2Fen%2Fflags_world.html&psig=AOvVaw3MyrGIyn8J7m60q5d6ooqm&ust=1665961816204000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCOCLrMSt4_oCFQAAAAAdAAAAABAE)
+
+JavaScript code has been written with inspiration from:
+* [YouTube]](https://www.youtube.com/watch?v=riDzcEQbX6k)
+* [Google Page](https://simplestepscode.com/javascript-quiz-tutorial/)
+
+
+
 
