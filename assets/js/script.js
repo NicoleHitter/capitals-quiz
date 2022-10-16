@@ -45,8 +45,9 @@ const startButton = document.getElementById('start-btn');
 const submitButton = document.getElementById('submit-btn');
 const nextButton = document.getElementById('next-btn');
 const questionArea = document.getElementById('text-container');
+const end = document.getElementById('end-of-page');
 
-let questionIndex = 0;
+let questionIndex = -1;
 let playerAnswer = '';
 let score = 0;
 let negscore = 0;
@@ -68,6 +69,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 function startQuiz() {
     console.log('started');
     startButton.classList.add('hide');
+    startButton.classList.add('hide');
     questionArea.classList.remove('hide');
     displayQuestion();
 }
@@ -80,6 +82,7 @@ function startQuiz() {
  * this function will end once it reached the end of questions and will run the end function
  */
 function displayQuestion() {
+    questionIndex++;
     if (questionIndex < MY_QUESTIONS.length) {
         document.getElementById('question').innerHTML = MY_QUESTIONS[questionIndex].question;
         let answersList = MY_QUESTIONS[questionIndex].answers;
@@ -89,7 +92,6 @@ function displayQuestion() {
     } else {
         endQuiz();
     }
-
 }
 
 /**
@@ -120,7 +122,6 @@ function checkAnswer() {
         negscore++;
         document.getElementById('negscore').innerHTML = `Wrong answers: ${negscore}`;
     }
-    questionIndex++;
 }
 
 /**
@@ -129,10 +130,9 @@ function checkAnswer() {
  * restart button that if pressed will reload page at the beginning to play game again
  */
 function endQuiz() {
-    document.getElementById("end-paragraph").innerHTML =
-        `<p>You have ${score} correct answer(s) and ${negscore} incorrect answer(s)!</p>
-     <button id="restart-btn" class="play-btn" onClick="location.href='https://8000-nicolehitte-capitalsqui-ylzxre2nrha.ws-eu71.gitpod.io/'">Restart</button>`;
-
+    document.getElementById("final-message").textContent =
+        `You have ${score} correct answer(s) and ${negscore} incorrect answer(s)!`;
+    end.classList.remove('hide');
     questionArea.classList.add('hide');
 
 }
