@@ -46,6 +46,7 @@ const submitButton = document.getElementById('submit-btn');
 const nextButton = document.getElementById('next-btn');
 const questionArea = document.getElementById('text-container');
 const end = document.getElementById('end-of-quiz');
+const answerMsg = document.getElementById('answermsg');
 const optionsButtons = document.querySelectorAll('.buttons');
 const checkBox = document.getElementsByName('planswer');
 
@@ -88,6 +89,7 @@ function displayQuestion() {
     } else {
         endQuiz();
     }
+    answerMsg.classList.add('hide');
     submitButton.classList.add('hide');
     nextButton.classList.add('hide');
 }
@@ -122,6 +124,7 @@ function checkAnswer() {
     }
     nextButton.classList.remove('hide');
     submitButton.classList.add('hide');
+    answerMsg.classList.remove('hide');
 }
 
 /**

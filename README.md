@@ -49,6 +49,15 @@ When questions have ended user will be presented with his final score, and then 
 
 In time the site should allow the user to create an account and play against time and other users.
 
+## Technologies used 
+* GitHub
+* Gitpod
+* HTML
+* CSS
+* JavaScript 
+* Google Chrome developer tools
+* FontAwesome
+
 ## Typography and colour scheme
 Page has a fairly simple appearence. Backround is created by an image with different flags, then text area is fitted inside a white container. Text colours have been specified in CSS by rgb(red,green,blue) values. 
  
@@ -87,12 +96,26 @@ Metrics
 * The most complex function has a cyclomatic complexity value of 6 while the median is 1.
 
 ### Fixed Bugs 
+* Before fixing, on pressing Submit button twice under the same question, result area will already come incorrect as would already be compared to the next question, as the questionIndex incrementation was taking place within the checkAnswer Function. This has been changed by moving the questionIndex incrementation in the displayQuestion function. 
+
+* When moving to next question, the last answer (button) checked, will remain to the next question, and user will need to press again on it then Submit. This has been changed by creating a loop that is going to check if any of the buttons are pressed when displaying question, and if so unselecting it.
 
 ## Deployment
+### GitHub
 The site was deployed to GitHub pages. The steps to deploy are as follows:
   * In the GitHub repository, navigate to the Settings tab
   * From the source section drop-down menu, select the Master Branch
   * Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+  The live link can be found here - https://nicolehitter.github.io/capitals-quiz/ .
+
+### Gitpod
+After opening the repository in GitHub, you can press on Gitpod button which will take you to Gitpod.
+To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+python3 -m http.server
+
+A blue button should appear to click: Make Public,
+Another blue button should appear to click: Open Browser.
+
 
 ## Credits
 ### Content
