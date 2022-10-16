@@ -21,12 +21,12 @@ body {
 
 }
 
-.container > h1 {
+.container>h1 {
     color: rgb(35, 35, 153);
     font-size: 50px;
 }
 
-#answermsg  {
+#answermsg {
     color: rgb(113, 156, 11);
     text-decoration-line: underline;
 }
@@ -38,9 +38,14 @@ body {
 
 }
 
+#answer-buttons {
+    text-align: justify;
+    margin-left: 40%;
+}
+
 #score {
     width: 50%;
-    margin:20% 30% 0 0;
+    margin: 20% 30% 0 0;
     color: rgb(23, 23, 223);
 }
 
@@ -54,22 +59,52 @@ body {
     color: #fff;
     background: rgb(140, 140, 212);
     /* sets the shape of the button */
-    border:1px solid rgb(31, 25, 25);
+    border: 1px solid rgb(31, 25, 25);
     border-radius: 10%;
 }
 
-.play-btn:hover{
+.play-btn:hover {
     background-color: rgb(23, 23, 223);
 }
 
-.scores{
+.scores {
     width: 100%;
     font-size: 25px;
 }
-
-
 
 .hide {
     display: none;
 }
 
+@media screen and (max-width: 900px) {
+    #score {
+        width: 100%;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        /*Sets the size and style of the area that includes the text */
+        width: 80%;
+        height: 600px;
+        font-size: 20px;
+    }
+
+    #question-container {
+        height: 50%;
+    }
+
+    .textarea {
+        font-size: 20px;
+    }
+
+    .container>h1 {
+        font-size: 30px;
+    }
+
+    #score {
+        width: 100%;
+        float: left;
+    }
+}

@@ -16,14 +16,14 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container textarea">
 
         <h1>Test Your Knowledge! Capitals Quiz</h1>
 
         <div id="text-container" class="hide">
             <div id="question-container">
                 <p id="question"></p>
-                <form>
+                <form id="answer-buttons">
                     <input type="radio" name="planswer" value="a" id="firstinput" class="buttons">
                     <label for="firstinput" id="a"></label><br>
                     <input type="radio" name="planswer" value="b" id="secondinput" class="buttons">
@@ -33,23 +33,24 @@
                 </form>
             </div>
 
-            <div id="end-of-quiz">  
-            <p id="final-message"></p>
-            <button id="restart-btn" class="play-btn" onClick="window.location.reload()"></button>
-            </div>
-
-            <span id="answermsg"></span><br>
+            <span id="answermsg" class="textarea"></span><br>
 
             <div class="scores">
-                <span id="score"></span>
-                <span id="negscore"></span>
+                <span id="score" class="textarea"></span>
+                <span id="negscore" class="textarea"></span>
             </div><br>
 
             <button id="submit-btn" class="play-btn">Submit</button>
             <button id="next-btn" class="play-btn">Next</button>
 
         </div>
-        <span id="end-paragraph"></span>
+
+        <div id="end-of-quiz" class="hide textarea">
+            <p id="final-message"></p>
+            <button id="restart-btn" class="play-btn" onClick="window.location.reload()">Restart</button>
+        </div>
+
+        <span id="end-paragraph" class="textarea"></span>
 
         <button id="start-btn" class="play-btn">Start</button>
     </div>
